@@ -103,7 +103,7 @@ type Encoder struct {
 }
 
 // NewEncoder creates a new Encoder that encodes to w.
-func NewEncoder(w io.Writer) io.WriteCloser {
+func NewEncoder(w io.Writer) *Encoder {
 	return new(Encoder).Reset(w)
 }
 
@@ -210,7 +210,7 @@ type Decoder struct {
 }
 
 // NewDecoder creates a new Decoder that decodes from r.
-func NewDecoder(r io.Reader) io.Reader {
+func NewDecoder(r io.Reader) *Decoder {
 	return new(Decoder).Reset(r)
 }
 
